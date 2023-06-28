@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://www.darrenreed.net/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 9999;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style>
+  
+  
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  <!-- Preload -->
+  
+
+  <!-- Fonts -->
+  
+<style>
+  @font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-400-1-6879fc46e5489557637ef86755ff23da5caf8f198ff2d52db9f1bbfef2a81065.woff2) format("woff2");unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-400-2-538897d0e57dd5bfc199a280785131f93845140136f589ee6e3f2005b4e5da60.woff2) format("woff2");unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-400-3-10d0f401f92ae511d73584921bf418ddce180ac7b866fcd31ce26ce0cc443815.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-400-4-d5f811e877d80311ba40975ff06340da2e5a81478fc994781e91d7e185994914.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-400-5-a18ab7b2d38891f2ec8403a5efee02cdd86bdd9e145004dae1e613bcff4e1019.woff2) format("woff2");unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-400-6-941b7d776ee0eb2d52b5a5cba2b3050e62f32d21c614e041185ed0c5be2c6aef.woff2) format("woff2");unicode-range:U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-400-7-8dc97c61d9c13e2d76bfc7f5857447187ce377620e2f6cc88d18b00ea41a34b0.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-700-8-e9878f3a208c8e2bcc0b03333993072c2551a54283b40596f2e92cc2b701a902.woff2) format("woff2");unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-700-9-24ed1efbdcdf8e30f17cdaf3639d869f7667fb4242b9b0cb2746a18f72153a91.woff2) format("woff2");unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-700-10-c632337c19bc481c45128f36f462a9dfc4f604a007e9840a90cfe9a3e525b455.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-700-11-a5e7b98d0e782533ea80b5dd3842682b720d17bf0c3aa49c1657966c513c0e53.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-700-12-ce27fbb629379ae99e2c13c596cba234a7745c976d8fc37310047474f8962418.woff2) format("woff2");unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-700-13-4a280c70809caeb97775817aa3f617e7d90555fd686206644ece25f23e268032.woff2) format("woff2");unicode-range:U+0100-02AF, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url(https://www.personalinformatics.org/assets/google-fonts/files/Roboto-700-14-a4d0b17213fb9a28848364aff7d99b6bf40eebf8f90b56904090d4a1851225ea.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+</style>
+
+
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" media="all" href="./mm_files/themes-0d1d8878.css" data-turbo-track="reload">
+  <link rel="stylesheet" media="all" href="./mm_files/themes-goggles-5b5e91a1.css" data-turbo-track="reload">
+  <style>
+
+  :root {
+    --blt-font-base: Roboto, sans-serif;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: #607d8b;
+    text-decoration: underline;
+  }
+
+  .theme-btn {
+    color: rgba(0, 0, 0, .87);
+  }
+
+  .goggles-header:not(.goggles-banner) {
+    background-color: #607d8b;
+  }
+</style>
+
+  
+  <!-- Feature CSS and Javascript-->
+  <script src="./mm_files/themes-591db48a.js.download" crossorigin="anonymous" type="module" data-turbo-track="reload" defer="defer"></script><link rel="modulepreload" href="https://www.personalinformatics.org/vite/assets/lazyload.esm-c681440f.js" as="script" crossorigin="anonymous" data-turbo-track="reload" defer="defer">
+<link rel="modulepreload" href="https://www.personalinformatics.org/vite/assets/startConnectionTimeout-f8c1d51f.js" as="script" crossorigin="anonymous" data-turbo-track="reload" defer="defer">
+<link rel="modulepreload" href="https://www.personalinformatics.org/vite/assets/_commonjsHelpers-042e6b4d.js" as="script" crossorigin="anonymous" data-turbo-track="reload" defer="defer">
+
+  
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="turbo-cache-control" content="no-cache"><title>Darren Reed</title><link rel="icon" type="image/x-icon" href="https://www.owlstown.com/favicon.ico"><meta name="description" content="Hello. I am a social scientist who works at the University of York. I specialise in  embodied human interaction and technology. I particularly interested in ..."><link rel="canonical" href="https://www.darrenreed.net/"><link rel="alternate" href="https://www.darrenreed.net/posts.rss" type="application/rss+xml" title="Recent blog posts from Darren Reed"><link rel="image_src" href="https://spaces-cdn.owlstown.com/blobs/ys16ej476a5oysbgzmiuy0prii8p"><meta property="og:type" content="article"><meta property="og:title" content="Darren Reed"><meta property="og:image" content="https://spaces-cdn.owlstown.com/blobs/ys16ej476a5oysbgzmiuy0prii8p"><meta property="og:description" content="Hello. I am a social scientist who works at the University of York. I specialise in  embodied human interaction and technology. I particularly interested in ..."><meta name="twitter:title" content="Darren Reed"><meta name="twitter:description" content="Hello. I am a social scientist who works at the University of York. I specialise in  embodied human interaction and technology. I particularly interested in ..."><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://spaces-cdn.owlstown.com/blobs/ys16ej476a5oysbgzmiuy0prii8p"><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="bIdz6PNCOKVMe8dbMDch8azAHFZTj13zbRiGrC8yww14tXGRjug3dsqO/f4sPJNg0hZS8R6mG017e7eRb8v2Ig=="></head>
+<body data-controller=" owlstown-bridge" style="overflow: auto;">
+  
+
+  <div class="theme-page" data-controller="load-mathjax">
+    
+  
+<header class="goggles-header goggles-header--banner" style="position: relative;">
+  <picture style="  object-fit: cover;
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+">
+    <source srcset="https://spaces-cdn.owlstown.com/blobs/n01lk2o1zr2k0hhq5z74zv4u3dc3" type="image/webp">
+    <img src="./mm_files/ikijy6zliqwbn69j9t8pvii6lq9k" style="  object-fit: cover;
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+">
+  </picture>
+
+  <div style="
+      position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    "></div>
+
+  <picture style="  object-fit: cover;
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+">
+    <source srcset="https://spaces-cdn.owlstown.com/blobs/ef01yy3sho046ph16cxzwjdtt56p" media="(max-width: 200px)">
+    <source srcset="https://spaces-cdn.owlstown.com/blobs/3d10hyxejoi4c0dq0g7575wl477v" media="(max-width: 400px)">
+    <source srcset="https://spaces-cdn.owlstown.com/blobs/xx75a7xywhwx2a3ppgk59pi30kt5" media="(max-width: 800px)">
+    <source srcset="https://spaces-cdn.owlstown.com/blobs/4d873mn15pack6dpcka56mfj0b77" media="(min-width: 800.1px)">
+    <img src="./mm_files/file.webp" style="  object-fit: cover;
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+">
+  </picture>
+
+    <div style="
+        position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(
+  rgba(0, 0, 0, 0) 0%,
+  rgba(0, 0, 0, 0.4) 60%,
+  rgba(0, 0, 0, 0.5) 100%
+)
+;
+      "></div>
+
+  
+      <div class="container goggles-container flex-col blt-align-center">
+
+    <div class="flex-fill"></div>
+
+    <div class="flex-fixed">
+        <div class="goggles-site-avatar" style="margin-bottom: 24px;" data-site-editable-id="site_picture">
+    <div class="theme-site-avatar-picture" style="
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        padding: 100% 0 0;
+        background-color: #ccc;
+      ">
+      <img src="./mm_files/file(1).webp" srcset="https://spaces-cdn.owlstown.com/blobs/ld2lic6lld02beiewj4731avbj5d 1x, https://spaces-cdn.owlstown.com/blobs/3rrhzgaio7lq73cz291od024igpa 2x" style="
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+        ">
+    </div>
+</div>
+
+      <div data-site-editable-id="site_title">
+        <h1 class="goggles-header__title">
+          <a href="https://www.darrenreed.net/">Darren Reed</a>
+        </h1>
+
+      </div>
+
+        <hr class="space-md">
+        <ul class="goggles-social-btns">
+    <li>
+      <a target="_blank" rel="noopener noreferrer" aria-label="University Homepage" href="https://www.york.ac.uk/sociology/our-staff/academic/darren-reed/">
+          <span class="goggles-social-btns__letter">U</span>
+</a>    </li>
+</ul>
+
+    </div>
+
+    <div class="flex-fill"></div>
+  </div>
+
+
+</header>
+
+      <div class="goggles-nav goggles-nav--dark">
+    <div class="flex-row flex-justify-center" data-controller="overflow-nav" data-overflow-nav-links-item-selector-value=".goggles-nav__navlinks &gt; nav &gt; ul &gt; li" data-overflow-nav-menu-item-selector-value="nav.goggles-nav__overflow-menu &gt; ul &gt; li" data-overflow-nav-subtract-width-value="100" data-overflow-nav-target="linksContainer" style="
+        /* Set to 0, so that the flex item shrinks past its initial size
+         * https://dfmcphee.com/flex-items-and-min-width-0/ */
+        min-width: 0;
+      ">
+
+      <div class="goggles-nav__navlinks flex-row hidden-xs-down" style="
+          /* Set to 0, so that the flex item shrinks past its initial size
+           * https://dfmcphee.com/flex-items-and-min-width-0/ */
+          min-width: 0;
+        ">
+        <nav class="flex-fill" style="min-width: 0" data-site-editable-id="navpages">
+  <ul>
+
+
+        <li style="display: block;">
+          <a class="is-active" href="https://www.darrenreed.net/">Home</a>
+        </li>
+
+
+        <li style="display: block;">
+          <a class="" href="https://www.darrenreed.net/publications">Publications</a>
+        </li>
+
+
+        <li style="display: block;">
+          <a class="" href="https://www.darrenreed.net/courses">Courses</a>
+        </li>
+
+
+        <li style="display: block;">
+          <a class="" href="https://www.darrenreed.net/posts">Posts</a>
+        </li>
+        <li style="display: block;">
+          <a href="https://www.york.ac.uk/sociology/our-staff/academic/darren-reed/">Department Page</a>
+        </li>
+  </ul>
+</nav>
+
+        <div data-overflow-nav-target="menuContainer" style="display: none;">
+          <div data-controller="popover2" data-popover2-anchor-origin-horizontal-value="right" data-popover2-transform-origin-horizontal-value="right">
+  <div data-popover2-target="anchor" data-action="click-&gt;popover2#show" style="
+      cursor: pointer;
+      user-select: none;
+    ">
+                  <div class="goggles-nav__overflow-toggle">
+                <span style="white-space: nowrap;">More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="display: block; fill: currentColor;"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6l-6-6l1.41-1.41z"></path></svg>
+
+              </div>
+
+  </div>
+
+  <div data-popover2-target="overlay" data-action="click-&gt;popover2#hide" style="
+      display: none;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+    "></div>
+
+  <div data-popover2-target="body" data-action="click-&gt;popover2#hide" style="
+      display: none;
+      /* Set to fixed, so that the width of this div doesn&#39;t affect width of its parent. */
+      position: fixed;
+      /* Make sure this appears above other elements */
+      z-index: 1;
+    ">
+                  <nav class="goggles-nav__overflow-menu" style="" data-site-editable-id="navpages">
+  <ul>
+
+
+        <li style="display: none;">
+          <a class="is-active" href="https://www.darrenreed.net/">Home</a>
+        </li>
+
+
+        <li style="display: none;">
+          <a class="" href="https://www.darrenreed.net/publications">Publications</a>
+        </li>
+
+
+        <li style="display: none;">
+          <a class="" href="https://www.darrenreed.net/courses">Courses</a>
+        </li>
+
+
+        <li style="display: none;">
+          <a class="" href="https://www.darrenreed.net/posts">Posts</a>
+        </li>
+        <li style="display: none;">
+          <a href="https://www.york.ac.uk/sociology/our-staff/academic/darren-reed/">Department Page</a>
+        </li>
+  </ul>
+</nav>
+
+
+  </div>
+</div>        </div>
+      </div>
+
+      <div class="goggles-nav-modal hidden-sm-up" data-controller="modal">
+        <div class="goggles-nav-modal__open" data-action="click-&gt;modal#show">
+          Menu
+        </div>
+
+        <div class="goggles-nav-modal__full-screen">
+          <div class="goggles-nav-modal__close" data-action="click-&gt;modal#hide">
+            Close
+          </div>
+          <nav class="goggles-nav-modal__navlinks" style="" data-site-editable-id="navpages">
+  <ul>
+
+
+        <li>
+          <a class="is-active" href="https://www.darrenreed.net/">Home</a>
+        </li>
+
+
+        <li>
+          <a class="" href="https://www.darrenreed.net/publications">Publications</a>
+        </li>
+
+
+        <li>
+          <a class="" href="https://www.darrenreed.net/courses">Courses</a>
+        </li>
+
+
+        <li>
+          <a class="" href="https://www.darrenreed.net/posts">Posts</a>
+        </li>
+        <li>
+          <a href="https://www.york.ac.uk/sociology/our-staff/academic/darren-reed/">Department Page</a>
+        </li>
+  </ul>
+</nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <main class="goggles-main">
+      <div class="container goggles-container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div data-site-editable-id="about">
+    <h1 class="blt-h1" dir="auto">About</h1>
+
+    <hr class="space-md">
+
+    
+
+  <div class="theme-blocks">
+        <div class="theme-block">
+                      <div class="trix-content theme-trix-content" dir="auto">    <div>Hello. I am a social scientist who works at the University of York. I specialise in&nbsp; embodied human interaction and technology. I particularly interested in the way we might think of human interaction as a form of dance. This comes from an early career in performance and as a ballroom dance teacher. I currently teach about, and research, contemporary technologies, such as Twitch and Soundcloud, and am interested in the ways they change society and human interaction.&nbsp; I am also keenly interested in robotics and human embodiment.&nbsp;<br><br>On this page you can find links to a list of my publications, the courses I teach, and my research. You can also find a blog, in which I talk about my research interests.&nbsp;<br><br>If you are looking for a Phd or Post Doc position, I am interested in supervising&nbsp; the following areas:</div><ul>
+<li>embodied interaction</li>
+<li>embodied interaction with and through technology</li>
+<li>robotics and human embodiment</li>
+<li>dance and human sociality</li>
+</ul><div>If your interests are not listed here, please still get in touch. Who's to know, maybe there is a new area, waiting to be discovered. My email address is at the bottom of the page.&nbsp;</div>
+</div>
+
+        </div>
+        <div class="theme-block">
+                            <h2 class="blt-h2" dir="auto">
+      Recent Posts
+    </h2>
+
+    <hr class="space-sm">
+
+    <p class="blt-p" dir="auto">
+    <a class="blt-color-b2" href="https://www.darrenreed.net/posts/213-my-new-page">Apr  9, 2021</a>
+  </p>
+
+    <h3 class="blt-h3" dir="auto">
+    <a href="https://www.darrenreed.net/posts/213-my-new-page">My new page</a>
+  </h3>
+
+<p class="blt-p" dir="auto">
+  This is my new page on the web.&nbsp;&nbsp;
+</p>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="theme-block">
+                            <h2 class="blt-h2" dir="auto">
+      Publications
+    </h2>
+
+    <hr class="space-sm">
+
+  
+  <div>
+
+    <div class="row">
+
+
+
+      <div class="col-xs-12 false">
+
+        <p class="blt-h4 blt-weight-bold" dir="auto">
+          <a href="https://www.darrenreed.net/publications/3100-situating-embodied-instruction-proxemics-and-body-knowledge">Situating Embodied instruction - proxemics and body knowledge</a>
+        </p>
+
+        <hr class="space-4">
+
+        <p class="blt-p" dir="auto">
+          Darren J Reed
+        </p>
+
+        <p class="blt-p blt-color-b2" dir="auto">
+          Linguistics Vanguard, 2021
+        </p>
+
+
+      </div>
+    </div>
+
+      <hr class="space-md">
+
+</div>  <div>
+
+    <div class="row">
+
+
+
+      <div class="col-xs-12 false">
+
+        <p class="blt-h4 blt-weight-bold" dir="auto">
+          <a href="https://www.darrenreed.net/publications/3101-embodiment-relationality-and-epistemics-observations-from-alexander-technique-training-in-music-master-classes">Embodiment, relationality and epistemics: observations from Alexander Technique training in music master classes</a>
+        </p>
+
+        <hr class="space-4">
+
+        <p class="blt-p" dir="auto">
+          Darren J Reed, Robin Wooffitt
+        </p>
+
+        <p class="blt-p blt-color-b2" dir="auto">
+          Sociology, 2021
+        </p>
+
+
+      </div>
+    </div>
+
+      <hr class="space-md">
+
+</div>  <div>
+
+    <div class="row">
+
+
+
+      <div class="col-xs-12 false">
+
+        <p class="blt-h4 blt-weight-bold" dir="auto">
+          <a href="https://www.darrenreed.net/publications/3103-dancing-with-data-introducing-a-creative-interactional-metaphor">Dancing with Data: Introducing a Creative Interactional Metaphor</a>
+        </p>
+
+        <hr class="space-4">
+
+        <p class="blt-p" dir="auto">
+          Darren J Reed
+        </p>
+
+        <p class="blt-p blt-color-b2" dir="auto">
+          Sociological Research Online, vol. 25(4), 2020 Dec, pp. 533--548
+        </p>
+
+
+      </div>
+    </div>
+
+      <hr class="space-md">
+
+</div>  <div>
+
+    <div class="row">
+
+
+
+      <div class="col-xs-12 false">
+
+        <p class="blt-h4 blt-weight-bold" dir="auto">
+          <a href="https://www.darrenreed.net/publications/3102-touch-and-talk-detailing-embodied-experience-in-the-music-masterclass">Touch and talk: detailing embodied experience in the music masterclass</a>
+        </p>
+
+        <hr class="space-4">
+
+        <p class="blt-p" dir="auto">
+          Darren J Reed
+        </p>
+
+        <p class="blt-p blt-color-b2" dir="auto">
+          Social Semiotics, vol. 30(5), 2019, pp. 625-645
+        </p>
+
+
+      </div>
+    </div>
+
+      <hr class="space-md">
+
+</div>  <div>
+
+    <div class="row">
+
+
+
+      <div class="col-xs-12 false">
+
+        <p class="blt-h4 blt-weight-bold" dir="auto">
+          <a href="https://www.darrenreed.net/publications/3106-assessments-in-transition-coordinating-participation-framework-transition-in-institutional-settings">Assessments in Transition: Coordinating Participation Framework Transition in Institutional Settings</a>
+        </p>
+
+        <hr class="space-4">
+
+        <p class="blt-p" dir="auto">
+          Darren J Reed
+        </p>
+
+        <p class="blt-p blt-color-b2" dir="auto">
+          Embodied Activities in Face-to-face and Mediated Settings: Social Encounters in Time and Space, Elisabeth Reber, Nele Gerhardt, Embodied Activities in Face-to-face and Mediated Settings: Social Encounters in Time and Space, Palgrave Macmillan, 2018
+        </p>
+
+
+      </div>
+    </div>
+
+
+</div>
+  
+    <hr class="space-md">
+
+    <a class="theme-btn" href="https://www.darrenreed.net/publications">View all</a>
+
+
+
+        </div>
+        <div class="theme-block">
+                      <a class="theme-anchor" name="contact"></a>
+
+  <h2 class="blt-h2" dir="auto">
+    Contact
+</h2>
+  <hr class="space-md">
+
+<div class="row">
+  <div class="col-6 col-md-3" style="" data-site-editable-id="contact_picture">
+  <div class="theme-contact-avatar-picture" style="
+      background-image: url(https://images.unsplash.com/photo-1513882999086-aaa83696639d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwyMDE4NTZ8MHwxfHNlYXJjaHw1NXx8ZGFuY2luZ3xlbnwwfHx8fDE2MTc5NzMzNDM&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=400);
+      display: block;
+      margin: 0 auto;
+      padding: 100% 0 0;
+      background-color: #ccc;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 32px;
+    ">
+  </div>
+</div>
+
+
+  <div class="col-xs-12 col-md-6">
+      <div data-site-editable-id="contact">
+    <h3 class="blt-h3 theme-contact-name" dir="auto">Darren Reed</h3>
+    <p class="blt-p" dir="auto">Social Scientist</p>
+    <hr class="space-sm">
+  </div>
+
+      <div data-site-editable-id="contact">
+      <p class="blt-p" dir="auto">
+          darren.reed@york.ac.uk
+      </p>
+      <hr class="space-sm">
+
+
+
+
+
+
+              <p class="blt-p" dir="auto">
+          <a href="http://www.york.ac.uk/sociology">Sociology</a>
+        </p>
+        <p class="blt-p" dir="auto">
+          <a href="http://www.york.ac.uk/">University of York</a>
+        </p>
+        <div class="blt-wrap" dir="auto">
+          <p>Sociology Department 
+<br>University of York
+<br>YO10 5DD</p>
+        </div>
+
+      <hr class="space-md">
+  </div>
+
+  </div>
+
+  <div class="col-xs-12 col-md-3">
+
+    <div class="blt-p theme-contact-social-links" data-site-editable-id="social_links" dir="auto">
+    <div class="theme-contact-social-link">
+      <div class="theme-contact-social-link-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="" width="16px" height="16px" viewBox="0 0 64 64" version="1.1" style="vertical-align: middle;">
+    <circle fill="currentColor" cx="32" width="64" height="64" cy="32" r="32"></circle>
+    <text x="50%" y="50%" style="line-height: 1;font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, &#39;Roboto&#39;, &#39;Oxygen&#39;, &#39;Ubuntu&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif;" alignment-baseline="middle" text-anchor="middle" font-size="32" font-weight="600" dy=".1em" dominant-baseline="middle" fill="#ffffff">U</text>
+</svg>
+
+      </div>
+      <div class="theme-contact-social-link-text">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.york.ac.uk/sociology/our-staff/academic/darren-reed/">University Homepage</a>
+      </div>
+    </div>
+</div>
+<hr class="space-md">
+
+  </div>
+</div>
+
+
+        </div>
+  </div>
+
+
+</div>
+
+
+            <div class="space-xl"></div>
+
+<div class="theme-sharer" data-site-editable-id="sharer">
+  <div class="blt-p blt-color-b2" dir="auto">
+    Share
+  </div>
+  <ul class="theme-sharer-links">
+      <li>
+        <a title="Twitter" target="_blank" rel="noopener" class="theme-sharer-link" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.darrenreed.net%2F&amp;text=Darren+Reed">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645c0 138.72-105.583 298.558-298.558 298.558c-59.452 0-114.68-17.219-161.137-47.106c8.447.974 16.568 1.299 25.34 1.299c49.055 0 94.213-16.568 130.274-44.832c-46.132-.975-84.792-31.188-98.112-72.772c6.498.974 12.995 1.624 19.818 1.624c9.421 0 18.843-1.3 27.614-3.573c-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319c-28.264-18.843-46.781-51.005-46.781-87.391c0-19.492 5.197-37.36 14.294-52.954c51.655 63.675 129.3 105.258 216.365 109.807c-1.624-7.797-2.599-15.918-2.599-24.04c0-57.828 46.782-104.934 104.934-104.934c30.213 0 57.502 12.67 76.67 33.137c23.715-4.548 46.456-13.32 66.599-25.34c-7.798 24.366-24.366 44.833-46.132 57.827c21.117-2.273 41.584-8.122 60.426-16.243c-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+
+</a>      </li>
+      <li>
+        <a title="Facebook" target="_blank" rel="noopener" class="theme-sharer-link" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.darrenreed.net%2F&amp;t=Darren+Reed">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
+
+</a>      </li>
+      <li>
+        <a title="LinkedIn" target="_blank" rel="noopener" class="theme-sharer-link" href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.darrenreed.net%2F&amp;title=Darren+Reed">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="0.88em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2c-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3c94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+
+</a>      </li>
+      <li>
+        <a title="Email" target="_blank" rel="noopener" class="theme-sharer-link" href="mailto:?body=https%3A%2F%2Fwww.darrenreed.net%2F&amp;subject=Darren+Reed">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"></path></svg>
+
+</a>      </li>
+  </ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <hr class="space-lg">
+
+<footer class="goggles-footer">
+  <div class="container goggles-container">
+    <div class="blt-align-center">
+      <span style="display: inline-block">
+        
+  <div class="blt-p" dir="auto">
+    © 2023
+    Darren Reed
+  </div>
+
+      </span>
+      &nbsp;·&nbsp;
+      <a class="theme-link" href="https://www.darrenreed.net/privacy_policy">Privacy Policy</a>
+      <hr class="space-md">
+      <div class="blt-p" dir="auto">
+          <a href="https://www.owlstown.com/">Made in Owlstown</a>
+
+      </div>
+    </div>
+
+    <hr class="space-lg">
+  </div>
+</footer>
+
+  </div>
+
+      <div class="ot-follow-button-container theme-modal" data-controller="following modal" data-following-site-id-value="672" data-following-active-display-value="inline-flex">
+  <div data-following-target="following" data-action="click-&gt;following#unfollow" class="theme-btn" style="display: none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z"></path></svg>
+
+    <span>Following</span>
+  </div>
+  <div data-following-target="notFollowing" data-action="click-&gt;following#follow" class="theme-btn" style="display: none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
+
+    <span>Follow</span>
+  </div>
+
+  <div data-following-target="loggedOut" class="theme-btn" style="display: inline-flex;" data-action="click-&gt;modal#show">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
+
+    <span>Follow</span>
+  </div>
+
+  <div class="theme-modal__overlay" data-action="click-&gt;modal#hide"></div>
+
+  <div class="theme-modal__dialog-container">
+    <div class="theme-modal__dialog" style="width: 320px">
+      <div class="theme-modal__dialog-close-btn" data-action="click-&gt;modal#hide">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="display: block"><path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"></path></svg>
+      </div>
+
+      <div class="blt-align-center">
+        <hr class="space-md">
+        <img style="width: 200px; max-width: 100%;" src="./mm_files/undraw_hello_re_3evm-891b0f0dded632c749ab255b78eb3d528f3805380c4fe9737539e4e3976108e8.svg">
+        <hr class="space-md">
+
+        <h3 class="blt-h3" dir="auto">
+          Follow this website
+        </h3>
+        <hr class="space-md">
+
+        <p class="blt-p" dir="auto">
+          You need to create an Owlstown account to follow this website.
+        </p>
+        <hr class="space-xs">
+        <a href="https://www.owlstown.com/users/sign_up?redirect_to=%2Fsites%2F672" class="theme-btn">
+          Sign up
+        </a>
+      </div>
+      <hr class="space-md">
+
+      <div class="flex-row flex-wrap flex-align-center flex-justify-center gap-2">
+        <p class="blt-p" dir="auto">
+          Already an Owlstown member?
+        </p>
+        <a href="https://www.owlstown.com/users/sign_in?redirect_to=%2Fsites%2F672" class="theme-btn">
+          Log in
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <script>
+    // These variables are global so that the StatCounter script can access them.
+    var sc_project=12248062;
+    var sc_invisible=1;
+    var sc_security="f0ebc05f";
+
+    function loadStatCounter() {
+      // Make StatCounter work with Turbolinks.
+      // @see http://railsapps.github.io/rails-google-analytics.html
+
+      // Check if StatCounter is already loaded.
+      if (document.getElementById('statcounter-js')) return;
+
+      // Create an async script element based on your key.
+      var script = document.createElement('script');
+      script.id = 'statcounter-js';
+      script.async = true;
+      script.src = '//statcounter.com/counter/counter.js';
+
+      // Insert script at the end of body.
+      document.body.appendChild(script);
+    }
+
+    loadStatCounter();
+  </script>
+  <noscript>
+    <img src="./mm_files/saved_resource" width="0" height="0">
+  </noscript>
+
+  
+
+
+<script id="statcounter-js" async="" src="./mm_files/counter.js.download"></script><iframe src="./mm_files/bridge.html" style="display: none;"></iframe></body></html>
